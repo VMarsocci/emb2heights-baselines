@@ -97,7 +97,7 @@ def main():
             emb_path, _ = test_ds.file_pairs[i]
             core_id = _normalize_core_id(emb_path)
 
-            save_path = os.path.join(predictions_dir, f"pred_{core_id}.npy")
+            save_path = os.path.join(predictions_dir, f"{core_id}.npy")
             np.save(save_path, pred_np)
 
     print(f"Predictions saved to: {predictions_dir}")
